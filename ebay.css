@@ -514,6 +514,15 @@ flex-direction: revert;
 height: revert;
 }
 
+/* 13.3 eBay .card fix
+   (eBay's own .card style
+   limits cards to 400px
+   wide - keep) */
+.card {
+max-width: none;
+outline: none;
+}
+
 
 /* ====================
    14. MOBILE 540px
