@@ -524,11 +524,12 @@ outline: none;
 }
 
 /* 13.4 Dark mode fix
-   (asks phones and eBay
-   not to darken light
-   cards - keep) */
+   (says the page is
+   already dark, so phones
+   don't auto-darken the
+   light cards - keep) */
 :root {
-color-scheme: only light;
+color-scheme: dark;
 }
 
 
