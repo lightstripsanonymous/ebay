@@ -1,0 +1,790 @@
+/* ====================
+   EBAY CSS
+   ==================== */
+/* Shared by every eBay
+   description. Sections
+   1-15 match the Shopify
+   "Product description
+   styles" section, so edit
+   both together. */
+
+/* ====================
+   1. PAGE BASICS
+   ==================== */
+
+/* Affects the whole
+   description page. */
+
+form {
+margin: 0;
+padding: 0;
+border: none;
+}
+
+body {
+margin: 0 !important;
+background-color: #33302A;
+font-family: "Market Sans", Arial, sans-serif;
+}
+
+a {
+text-decoration: none;
+-webkit-appearance: none;
+cursor: pointer;
+color: white;
+}
+
+a[href^="tel"] {
+color: inherit;
+text-decoration: none;
+}
+
+
+/* ====================
+   2. CARDS
+   ==================== */
+
+.card,
+.footer_content {
+-webkit-font-smoothing: subpixel-antialiased;
+margin: 0 auto;
+width: 75%;
+min-width: 520px;
+transition: all 0.5s;
+}
+
+.card {
+display: block;
+border-radius: 40px;
+box-shadow: 0px 10px 40px 1px rgba(0, 0, 0, 0.35);
+text-align: center;
+color: white;
+align-content: center;
+overflow: visible;
+padding: 40px 0 50px 0;
+margin: 50px auto;
+border-top: rgba(255, 255, 255, 0.2) 1.5px solid;
+}
+
+
+/* ====================
+   3. TEXT BLOCKS
+   ==================== */
+
+.text_blocks {
+text-align: left;
+padding: 0 50px 0 50px;
+}
+
+
+/* ====================
+   4. DIAGRAM IMAGE
+   ==================== */
+
+/* 4.1 Layout */
+.diagram_image_container {
+height: 500px;
+padding-bottom: 30px;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+
+.diagram_image,
+.diagram_image_slide,
+.diagram_image_hoverarea,
+.diagram_image_options,
+.diagram_image_alternatives {
+margin: 0 auto;
+left: 0;
+right: 0;
+position: absolute;
+}
+
+.diagram_image {
+width: 500px;
+height: 500px;
+background-size: 500px;
+background-repeat: no-repeat;
+transition: all ease 1s;
+}
+
+.diagram_image_slide {
+transform: translateX(-500px);
+width: 500px;
+height: 500px;
+background-size: 500px;
+background-repeat: no-repeat;
+top: 0;
+opacity: 0;
+transition: all ease 1s;
+}
+
+/* 4.2 Buttons */
+.diagram_image_hoverarea {
+background-color: blue;
+top: 500px;
+border-radius: 20px;
+height: 30px;
+width: 30px;
+line-height: 30px;
+font-size: 30px;
+font-weight: 500;
+z-index: 10001;
+opacity: 0;
+}
+
+.diagram_image_options {
+background-color: #999;
+text-align: center;
+color: #000;
+top: 500px;
+z-index: 10000;
+border-radius: 20px;
+height: 30px;
+width: 30px;
+line-height: 30px;
+font-size: 16px;
+font-weight: 500;
+opacity: 0.4;
+transition: all cubic-bezier(0.95, 0.000, 0.680, 1.000) 1s;
+}
+
+.diagram_image_alternatives {
+background-color: #999;
+text-align: center;
+color: #000;
+top: 500px;
+z-index: 10000;
+display: inline-block;
+border-radius: 20px;
+height: 30px;
+width: 140px;
+line-height: 30px;
+font-size: 16px;
+font-weight: 500;
+opacity: 0;
+transform: translateX(-500px);
+transition: all ease 1s;
+}
+
+/* 4.3 Hover slide */
+.diagram_image_hoverarea:hover {
+width: 500px;
+height: 530px;
+top: 0;
+}
+
+.diagram_image_hoverarea:hover ~ .diagram_image {
+transform: translateX(500px);
+opacity: 0.3;
+}
+
+.diagram_image_hoverarea:hover ~ .diagram_image_slide {
+transform: translateX(0);
+opacity: 1;
+}
+
+.diagram_image_hoverarea:hover ~ .diagram_image_options {
+opacity: 1;
+color: hsla(0, 0%, 0%, 0);
+transform: translateX(55px);
+}
+
+.diagram_image_hoverarea:hover ~ .diagram_image_alternatives {
+opacity: 1;
+transform: translateX(0);
+}
+
+.diagram_image_hoverarea:focus {
+width: 0;
+height: 0;
+z-index: 1;
+}
+
+
+/* ====================
+   5. DIMENSIONS IMAGE
+   ==================== */
+
+.cable_diagram_image_image,
+.cable_diagram_image_image_round,
+.cable_diagram_image_image_ribbon {
+width: 500px;
+height: 220px;
+background-size: 500px;
+background-repeat: no-repeat;
+margin: 0 auto;
+transition: all cubic-bezier(0.240, 1.415, 0.730, 0.985) 0.5s;
+}
+
+
+/* ====================
+   6. ITEM TO ITEM BAR
+   ==================== */
+
+.item_to_item {
+padding: 15px 0;
+border-top-left-radius: 40px;
+border-top-right-radius: 40px;
+color: #333;
+text-align: center;
+border-top: rgba(255, 255, 255, 0.4) 1.5px solid;
+line-height: 30px;
+background: radial-gradient(circle, rgba(0,255,0,0), rgba(0,255,0,0), rgba(0,0,0,0.25));
+}
+
+.item_to_item_left {
+display: inline-block;
+text-align: right;
+vertical-align: middle;
+}
+
+.item_to_item_center {
+width: 10%;
+display: inline-block;
+text-align: center;
+vertical-align: middle;
+}
+
+.item_to_item_right {
+display: inline-block;
+text-align: left;
+vertical-align: middle;
+}
+
+
+/* ====================
+   7. LENGTHS TABLE
+   ==================== */
+
+.table_lengths {
+max-width: 650px;
+display: grid;
+grid-template-columns: repeat(2, 1fr) 24fr repeat(2, 1fr);
+grid-template-rows: 1fr 2fr 4fr 1fr;
+grid-column-gap: 0;
+grid-row-gap: 0;
+color: white;
+font-weight: 600;
+margin: 0 auto;
+}
+
+.table_lengths_top {
+text-align: center;
+display: flex;
+align-items: flex-end;
+justify-content: center;
+grid-area: 1 / 3 / 2 / 4;
+}
+
+.table_lengths_cable {
+text-align: center;
+writing-mode: sideways-lr;
+grid-area: 3 / 2 / 4 / 3;
+padding-right: 8px;
+}
+
+.table_lengths_table {
+grid-area: 2 / 3 / 5 / 4;
+}
+
+.table_lengths_image {
+width: 100%;
+border-radius: unset !important;
+box-shadow: none !important;
+margin-bottom: revert !important;
+}
+
+.table_lengths_cable,
+.table_lengths_top {
+font-size: x-small;
+font-weight: 400 !important;
+}
+
+
+/* ====================
+   8. COMPATIBILITY
+   ==================== */
+
+/* 8.1 Scroll area */
+.compatibility_scroll_area::-webkit-scrollbar {
+display: none;
+}
+
+.compatibility_scroll_area {
+overflow-x: scroll;
+padding: 0 50px 30px 50px;
+}
+
+.compatibility_scroll_area_container {
+display: grid;
+}
+
+/* 8.2 Chart and columns */
+.compatibility_sections {
+display: inline-block;
+width: 808px;
+transition: all ease 1s;
+font-size: 15px;
+margin: 0 -15px;
+}
+
+.compatibility_image {
+background-image: url(https://cdn.shopify.com/s/files/1/0904/3299/5702/files/compatibility_essential.png);
+background-size: 770px;
+width: 770px;
+height: 364px;
+margin: 0 auto;
+transition: all ease 1s;
+}
+
+/* 8.3 Each version
+   (red by default) */
+.compatibility_section {
+width: 12.5%;
+margin-left: 0;
+margin-right: 0;
+float: left;
+color: #FF3933;
+white-space: nowrap;
+}
+
+.compatibility_symbol {
+margin: -10px 5px 20px auto;
+background-color: #FF3933;
+width: 35px;
+height: 35px;
+border-radius: 20px;
+line-height: 37px;
+font-size: 27px;
+box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.3);
+transition: all ease 1s;
+color: #000;
+font-weight: 900;
+background-image: url(https://cdn.shopify.com/s/files/1/0904/3299/5702/files/images_diagrams_wrong.png);
+background-size: 35px;
+}
+
+.compatibility_title {
+font-weight: 700;
+transition: all ease 0.5s;
+}
+
+/* 8.4 Whole column clickable
+   (stretches each link up
+   over the chart image) */
+.compatibility_section {
+position: relative;
+padding-top: 364px;
+margin-top: -364px;
+}
+
+
+/* ====================
+   9. TITLES AND TERMS
+   ==================== */
+
+.title_custom {
+font-size: 25px;
+text-decoration: none;
+margin-bottom: 33px;
+color: rgba(255, 255, 255, 0.5);
+font-weight: 400;
+}
+
+.terms {
+padding: 0 0 60px 0;
+}
+
+
+/* ====================
+   10. CARD COLOURS
+   ==================== */
+
+.compatibility {
+background: linear-gradient(0deg, #181612, #24221D, #2F2D28);
+border: white 2px solid;
+}
+
+.dimensions {
+background: linear-gradient(45deg, #543029, #37442D, #28284B);
+background-clip: border-box !important;
+background-position-y: -2px;
+background-repeat: no-repeat;
+background-color: #543029;
+}
+
+.choose_the_length {
+background: linear-gradient(#6f6b61, #635f54, #56524a);
+background-clip: border-box !important;
+background-position-y: -2px;
+background-repeat: no-repeat;
+background-color: #56524a;
+}
+
+.fitting_instructions {
+background: linear-gradient(200deg, #e5e0d5, #f4efeb, #fffdfa, #fffdfa);
+background-clip: border-box !important;
+background-position-y: -2px;
+background-repeat: no-repeat;
+background-color: #c3bdb1;
+color: #000 !important;
+border-radius: 1.5px;
+}
+
+
+/* ====================
+   11. FITTING EXTRAS
+   ==================== */
+
+.manual_image {
+margin-bottom: 25px !important;
+border-radius: unset !important;
+box-shadow: none !important;
+margin: -5px;
+}
+
+.fitting_instructions > div > .title_custom {
+color: #000;
+margin-bottom: 15px;
+}
+
+.instructions_indent {
+margin: 0 2%;
+font-style: italic;
+}
+
+
+/* ====================
+   12. LAYOUT
+   ==================== */
+
+/* 12.1 Compatibility card */
+.card.compatibility {
+padding-bottom: 20px;
+}
+
+/* 12.2 Compatibility intro */
+.compatibility_intro {
+margin: auto;
+padding: 0 20px 20px 20px;
+}
+
+/* 12.3 Overview card */
+.card.cable_overview {
+padding-top: 0;
+background-color: #000;
+}
+
+/* 12.4 Overview text */
+.cable_overview > .text_blocks {
+padding-top: 50px;
+}
+
+/* 12.5 Lengths table title */
+.table_title {
+text-align: center;
+margin: 40px 0 0 0;
+}
+
+/* 12.6 Sub-title in a card */
+.subtitle {
+padding-top: 55px;
+margin-bottom: 20px;
+}
+
+
+/* ====================
+   13. EBAY + SHOPIFY FIXES
+   ==================== */
+
+/* 13.1 eBay dark mode fix
+   (stops eBay inverting
+   colours - keep) */
+html {
+filter: invert(0) !important;
+}
+
+/* 13.2 Shopify .card fix
+   (harmless on eBay) */
+.card:not(.ratio) {
+display: revert;
+flex-direction: revert;
+height: revert;
+}
+
+
+/* ====================
+   14. MOBILE 540px
+   ==================== */
+
+@media (max-width: 540px) {
+
+/* 14.1 Cards and text */
+.terms {
+padding: 0 0 10px 0;
+}
+
+.card,
+.footer_content {
+width: revert;
+min-width: 250px;
+margin: 0 10px;
+padding: 20px 0;
+}
+
+.card {
+margin: 50px 10px;
+}
+
+.text_blocks {
+padding: 0 30px 10px 30px;
+}
+
+body {
+font-size: 14px;
+}
+
+/* 14.2 Diagram image */
+.diagram_image_container {
+height: 375px;
+}
+
+.diagram_image,
+.diagram_image_slide {
+width: 375px;
+height: 375px;
+background-size: 375px;
+}
+
+.diagram_image_hoverarea,
+.diagram_image_options,
+.diagram_image_alternatives {
+top: 375px;
+}
+
+.diagram_image_hoverarea:hover {
+width: 375px;
+height: 405px;
+top: 0;
+}
+
+/* 14.3 Dimensions image */
+.cable_diagram_image_image,
+.cable_diagram_image_image_round,
+.cable_diagram_image_image_ribbon {
+width: 375px;
+background-size: 375px;
+}
+
+/* 14.4 Compatibility chart */
+.compatibility_scroll_area {
+padding: 0 0 20px 30px;
+}
+
+.compatibility_image {
+height: 273px;
+width: 577.5px;
+background-size: 577.5px;
+}
+
+.compatibility_sections {
+padding-right: 10px;
+font-size: 14px;
+width: 605px;
+margin: 0 -10px;
+}
+
+.compatibility_symbol {
+margin: -15px 5px 10px auto;
+width: 30px;
+height: 30px;
+line-height: 29px;
+font-size: 22px;
+background-size: 30px;
+}
+
+.compatibility_section {
+padding-top: 273px;
+margin-top: -273px;
+}
+
+}
+
+
+/* ====================
+   15. MOBILE 440px
+   ==================== */
+
+@media (max-width: 440px) {
+
+/* 15.1 Text */
+body {
+font-size: 12px;
+}
+
+/* 15.2 Diagram image */
+.diagram_image_container {
+height: 300px;
+}
+
+.diagram_image,
+.diagram_image_slide {
+width: 300px;
+height: 300px;
+background-size: 300px;
+}
+
+.diagram_image_hoverarea,
+.diagram_image_options,
+.diagram_image_alternatives {
+top: 300px;
+}
+
+.diagram_image_hoverarea:hover {
+width: 300px;
+height: 330px;
+top: 0;
+}
+
+/* 15.3 Dimensions image */
+.cable_diagram_image_image,
+.cable_diagram_image_image_round,
+.cable_diagram_image_image_ribbon {
+width: 280px;
+background-size: 280px;
+}
+
+/* 15.4 Compatibility chart */
+.compatibility_scroll_area {
+padding: 0 0 6px 22px;
+}
+
+.compatibility_image {
+height: 182px;
+width: 385px;
+background-size: 385px;
+}
+
+.compatibility_sections {
+padding-right: 10px;
+font-size: 13px;
+width: 405px;
+margin: 0 -8px;
+}
+
+.compatibility_symbol {
+margin: -15px 0 10px auto;
+width: 25px;
+height: 25px;
+line-height: 24px;
+font-size: 19px;
+background-size: 25px;
+}
+
+.compatibility_section {
+padding-top: 182px;
+margin-top: -182px;
+}
+
+.compatibility_title {
+transform: rotate(-90deg);
+margin-bottom: 15px;
+margin-top: 55px;
+}
+
+}
+
+
+/* ====================
+   16. LANGUAGE LINKS
+   ==================== */
+
+/* Shopify only (script).
+   Not used on eBay - the
+   number is kept so both
+   files match. */
+
+
+/* ====================
+   17. FOOTER AND LOGO
+   ==================== */
+
+/* eBay only */
+
+/* 17.1 Footer */
+.footer_custom {
+background-color: black;
+font-size: 12px;
+color: #aaa;
+}
+
+.footer_color_line {
+background: linear-gradient(to right, #FF00FF, red, #FF6400, #FFFF00, #FFE0B0, white, #BEF1FF, #00ff00, aqua, #3232FF, #4600FF, #FF00FF);
+height: 2px;
+}
+
+.divider_bar {
+border-top: solid 1.5px rgba(255, 255, 255, 0.1);
+margin: 25px;
+}
+
+/* 17.2 Logo */
+.logo {
+margin-top: 30px;
+width: 210px;
+height: 60px;
+}
+
+.mask {
+background-image: url(https://cdn.shopify.com/s/files/1/0904/3299/5702/files/Logo-Glow-Mask.png);
+height: 60px;
+width: 210px;
+background-size: cover;
+background-repeat: no-repeat;
+top: -60px;
+position: relative;
+}
+
+.logo_tagline {
+vertical-align: bottom;
+margin: 30px 0;
+font-weight: 500;
+color: #fff;
+}
+
+/* 17.3 Logo glow */
+.logo_glow {
+width: 100%;
+height: 50%;
+background-size: 200% 200%;
+animation-timing-function: linear;
+animation-duration: 10s;
+animation-iteration-count: infinite;
+}
+
+.logo_glow_top {
+background: linear-gradient(45deg, #FF00FF, #FF00FF, #FF00FF, red, #FF6400, #FFFF00, #FFE0B0, #fff, #BEF1FF, #00ff00, aqua, aqua, #3232FF, #4600FF, #FF00FF, #FF00FF, #FF00FF);
+animation-name: logo_glow_top;
+}
+
+.logo_glow_bottom {
+background: linear-gradient(45deg, #FF00FF, #FF00FF, #FF00FF, #4600FF, #3232FF, aqua, aqua, #00ff00, #BEF1FF, white, #FFE0B0, #FFE0B0, #FFFF00, #FF6400, red, #FF00FF, #FF00FF, #FF00FF);
+animation-name: logo_glow_bottom;
+}
+
+@keyframes logo_glow_top {
+0% {background-position: 200% 30%;}
+100% {background-position: 0% 30%;}
+}
+
+@keyframes logo_glow_bottom {
+0% {background-position: 0% 30%;}
+100% {background-position: 200% 30%;}
+}
+
+
+/* ====================
+   EBAY CSS END
+   ==================== */
