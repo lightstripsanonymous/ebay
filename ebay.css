@@ -532,6 +532,20 @@ outline: none;
 color-scheme: dark;
 }
 
+/* 13.5 eBay bottom fix
+   (black behind the page,
+   so no grey band shows
+   under the footer when
+   eBay's frame is taller
+   than the page - keep) */
+html {
+background-color: #000;
+}
+
+body {
+display: flow-root;
+}
+
 
 /* ====================
    14. MOBILE 540px
