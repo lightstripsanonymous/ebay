@@ -455,6 +455,36 @@ margin: 0 2%;
 font-style: italic;
 }
 
+/* 11.1 Page-turn corner
+   Same lifted corner as the
+   cart note: bottom-right
+   edge curves up, light
+   shading where it lifts and
+   a deeper shadow peeking out
+   under that corner. No
+   extra layers, so nothing
+   else on the card changes.
+   Background colour matches
+   the paper, so no grey
+   strip shows at the edge */
+.fitting_instructions {
+border-radius: 1.5px 1.5px 260px 1.5px / 1.5px 1.5px 24px 1.5px;
+background-image:
+  linear-gradient(to top left, rgba(0, 0, 0, 0.1) 0, transparent 260px),
+  linear-gradient(200deg, #e5e0d5, #f4efeb, #fffdfa, #fffdfa);
+background-color: #fffdfa;
+box-shadow:
+  0px 10px 40px 1px rgba(0, 0, 0, 0.35),
+  14px 20px 20px -10px rgba(0, 0, 0, 0.6);
+}
+
+/* Smaller corner on phones */
+@media (max-width: 540px) {
+.fitting_instructions {
+border-radius: 1.5px 1.5px 150px 1.5px / 1.5px 1.5px 14px 1.5px;
+}
+}
+
 
 /* ====================
    12. LAYOUT
