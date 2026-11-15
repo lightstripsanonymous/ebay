@@ -485,6 +485,16 @@ border-radius: 1.5px 1.5px 150px 1.5px / 1.5px 1.5px 14px 1.5px;
 }
 }
 
+/* 11.2 Troubleshooting link
+   Grey, as on Shopify. eBay's
+   own link colour hid it */
+.minimal_link,
+a.minimal_link,
+a.minimal_link:visited,
+a.minimal_link:hover {
+color: #8C8880 !important;
+}
+
 
 /* ====================
    12. LAYOUT
