@@ -600,19 +600,49 @@ color: #fff;
 margin-top: 20px;
 }
 
-/* 12.9 ⚠️ in the title: small
-   gap after it, crisp black
-   outline (1px each way) and a
-   soft glow, same as the tab */
+/* 12.9 📏 in the title, same as
+   the tab. The description
+   still has ⚠️; it's hidden and
+   📏 drawn in its place, same
+   size. Faint 1px outline (15%
+   black) and a tight 2px glow */
 .lsa_chart_icon {
 display: inline-block;
+position: relative;
 margin-right: .6rem;
+visibility: hidden;
+}
+
+.lsa_chart_icon::before {
+content: "📏";
+visibility: visible;
+position: absolute;
+left: 0;
+top: 0;
 filter:
-  drop-shadow(1px 0 0 #000)
-  drop-shadow(-1px 0 0 #000)
-  drop-shadow(0 1px 0 #000)
-  drop-shadow(0 -1px 0 #000)
-  drop-shadow(0 0 6px rgba(0, 0, 0, .5));
+  drop-shadow(1px 0 0 rgba(0, 0, 0, .15))
+  drop-shadow(-1px 0 0 rgba(0, 0, 0, .15))
+  drop-shadow(0 1px 0 rgba(0, 0, 0, .15))
+  drop-shadow(0 -1px 0 rgba(0, 0, 0, .15))
+  drop-shadow(0 0 2px rgba(0, 0, 0, .4));
+}
+
+/* 12.10 friendlier rounded font
+   (Quicksand) on the chart box
+   title, same as the tab. Font
+   file self-hosted (not Google,
+   for GDPR) */
+@font-face {
+font-family: 'Quicksand';
+src: url('fonts/quicksand-700.woff2') format('woff2');
+font-weight: 700;
+font-style: normal;
+font-display: swap;
+}
+
+.lsa_chart_title {
+font-family: 'Quicksand', "Market Sans", Arial, sans-serif;
+font-weight: 700;
 }
 
 
