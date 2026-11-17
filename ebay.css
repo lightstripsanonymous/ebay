@@ -601,13 +601,17 @@ margin-top: 20px;
 }
 
 /* 12.9 ⚠️ in the title: small
-   gap after it and a soft glow
-   round it, same as the tab */
+   gap after it, crisp black
+   outline (1px each way) and a
+   soft glow, same as the tab */
 .lsa_chart_icon {
 display: inline-block;
 margin-right: .6rem;
 filter:
-  drop-shadow(0 0 1px rgba(0, 0, 0, .85))
+  drop-shadow(1px 0 0 #000)
+  drop-shadow(-1px 0 0 #000)
+  drop-shadow(0 1px 0 #000)
+  drop-shadow(0 -1px 0 #000)
   drop-shadow(0 0 6px rgba(0, 0, 0, .5));
 }
 
