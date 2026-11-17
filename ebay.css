@@ -534,6 +534,83 @@ padding-top: 55px;
 margin-bottom: 20px;
 }
 
+/* 12.7 Length chart box
+   Yellow box and title bar
+   around the length
+   compatibility chart(s),
+   styled like the ⚠️ length
+   tab under the Length box */
+.lsa_chart_box {
+max-width: 650px;
+margin: 10px auto 25px auto;
+border: 3px solid #fcc934;
+border-radius: 24px;
+overflow: hidden;
+/* yellow behind the 50px title
+   bar so no dark hairline shows
+   at its curved edge */
+background: linear-gradient(#fcc934 50px, #000 50px);
+}
+
+.lsa_chart_title {
+padding: 10px 0;
+line-height: 30px;
+text-align: center;
+white-space: nowrap;
+font-weight: 700;
+color: #000;
+background-color: #fcc934;
+position: relative;
+}
+
+/* 12.7.1 Rounded top corners on
+   the black area, filled with
+   the same yellow (21px, same
+   as the bottom corners) */
+.lsa_chart_title::before,
+.lsa_chart_title::after {
+content: "";
+position: absolute;
+bottom: -21px;
+width: 21px;
+height: 21px;
+z-index: 1;
+pointer-events: none;
+}
+
+.lsa_chart_title::before {
+left: 0;
+background: radial-gradient(circle at 100% 100%, transparent 20.5px, #fcc934 21px);
+}
+
+.lsa_chart_title::after {
+right: 0;
+background: radial-gradient(circle at 0 100%, transparent 20.5px, #fcc934 21px);
+}
+
+.lsa_chart_box .table_lengths {
+padding: 10px 16px 16px 16px;
+color: #fff;
+}
+
+/* 12.8 Flux sub-titles
+   (Standard / Ultra Bright)
+   inside the box */
+.lsa_chart_title + .table_title {
+margin-top: 20px;
+}
+
+/* 12.9 ⚠️ in the title: small
+   gap after it and a soft glow
+   round it, same as the tab */
+.lsa_chart_icon {
+display: inline-block;
+margin-right: .6rem;
+filter:
+  drop-shadow(0 0 1px rgba(0, 0, 0, .85))
+  drop-shadow(0 0 6px rgba(0, 0, 0, .5));
+}
+
 
 /* ====================
    13. EBAY + SHOPIFY FIXES
