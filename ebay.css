@@ -339,12 +339,16 @@ margin: 0 auto;
 transition: all ease 1s;
 }
 
-/* 8.3 Each version
-   (red by default) */
+/* 8.3 Each version (red by
+   default). Whole column is
+   clickable: padding stretches
+   each link up over the chart
+   image */
 .compatibility_section {
+position: relative;
 width: 12.5%;
-margin-left: 0;
-margin-right: 0;
+padding-top: 364px;
+margin: -364px 0 0 0;
 float: left;
 color: #FF3933;
 white-space: nowrap;
@@ -369,15 +373,6 @@ background-size: 35px;
 .compatibility_title {
 font-weight: 700;
 transition: all ease 0.5s;
-}
-
-/* 8.4 Whole column clickable
-   (stretches each link up
-   over the chart image) */
-.compatibility_section {
-position: relative;
-padding-top: 364px;
-margin-top: -364px;
 }
 
 
@@ -424,14 +419,13 @@ background-color: #56524a;
 }
 
 .fitting_instructions {
-background: linear-gradient(200deg, #e5e0d5, #f4efeb, #fffdfa, #fffdfa);
 background-clip: border-box !important;
 background-position-y: -2px;
 background-repeat: no-repeat;
-background-color: #c3bdb1;
 color: #000 !important;
-border-radius: 1.5px;
 }
+/* (paper colour, corner and
+   shadow are in 11.1) */
 
 
 /* ====================
@@ -538,7 +532,7 @@ margin-bottom: 20px;
    Yellow box and title bar
    around the length
    compatibility chart(s),
-   styled like the ⚠️ length
+   styled like the 📏 length
    tab under the Length box */
 .lsa_chart_box {
 max-width: 650px;
@@ -557,6 +551,7 @@ padding: 10px 0;
 line-height: 30px;
 text-align: center;
 white-space: nowrap;
+font-family: 'Quicksand', "Market Sans", Arial, sans-serif;
 font-weight: 700;
 color: #000;
 background-color: #fcc934;
@@ -627,22 +622,17 @@ filter:
   drop-shadow(0 0 2px rgba(0, 0, 0, .4));
 }
 
-/* 12.10 friendlier rounded font
-   (Quicksand) on the chart box
-   title, same as the tab. Font
-   file self-hosted (not Google,
-   for GDPR) */
+/* 12.10 Quicksand font for the
+   chart box title (12.7), same
+   as the tab. Font file self-
+   hosted (not Google, for
+   GDPR) */
 @font-face {
 font-family: 'Quicksand';
 src: url('fonts/quicksand-700.woff2') format('woff2');
 font-weight: 700;
 font-style: normal;
 font-display: swap;
-}
-
-.lsa_chart_title {
-font-family: 'Quicksand', "Market Sans", Arial, sans-serif;
-font-weight: 700;
 }
 
 
